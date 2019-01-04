@@ -1,0 +1,75 @@
+
+package remidyalgo;
+
+import java.util.Scanner;
+
+public class Remidyalgo {
+
+    
+    public static void main(String[] args) {
+       int pembayaran, jarak, potongan = 0,harga = 0, total = 0;
+       String nama, kategori,jenispembayaran;
+       
+       Scanner keyboard = new Scanner(System.in);
+       
+        System.out.println("----- Program ojek online -----");
+        
+        System.out.println("Masukkan nama : ");
+        nama = keyboard.next();
+        System.out.println("Masukkan kategori motor/mobil : ");
+        kategori = keyboard.next();
+        System.out.println("Masukkan jarak tempuh : ");
+        jarak = keyboard.nextInt();
+        System.out.println("Masukkan jenis pembayaran : ");
+        jenispembayaran = keyboard.next();
+        
+        
+        switch (kategori) {
+      case "motor":
+      harga = 3000;
+      break;
+      case "Mobil":
+      harga = 4000;
+      break;
+        }
+        
+        
+        
+     switch (jenispembayaran) {
+         case "Tunai":
+          potongan = 2000;
+          break;
+         case "RoomJackPay":
+           potongan = 5000;
+            break;
+     }
+        if (jarak > 8) {
+            total = (harga * jarak) - potongan;
+            System.out.println("Potongan = 2000");
+            System.out.println("Total tarif = " + total); 
+        }else{
+            total = harga * jarak;
+            System.out.println("Total Tarif = " + total);
+        }
+        if (jenispembayaran.equalsIgnoreCase("RoomJackPay")){
+            total = (harga * jarak) - potongan;
+            System.out.println("Potongan = 5000");
+            System.out.println("Total Tarif = " + total);
+            
+            
+        }
+    }
+}
+            
+            
+        
+            
+                    
+                
+        }
+        
+        
+        
+    }
+    
+}
